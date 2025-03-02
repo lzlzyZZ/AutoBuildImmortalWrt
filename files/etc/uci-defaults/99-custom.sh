@@ -42,7 +42,7 @@ if [ "$count" -eq 1 ]; then
    uci set network.lan.proto='static'
    uci set network.lan.ipaddr='192.168.0.2'
    uci set network.lan.netmask='255.255.255.0'
-   echo "set 192.168.100.1 at $(date)" >> $LOGFILE
+   echo "set 192.168.0.2 at $(date)" >> $LOGFILE
 elif [ "$count" -gt 1 ]; then
    # 提取第一个接口作为WAN
    wan_ifname=$(echo "$ifnames" | awk '{print $1}')
